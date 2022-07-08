@@ -1,19 +1,23 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: always 0.
+ * print_alphabet_x10 -> peints the lowercase alphabets
  */
 
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int j;
+	int x;
 
-		for (j = 'a'; j <= 'z'; j++)
+		for (x = 0; x < 10; x++)
+
 		{
-			putchar(j);
+			for (j = 'a'; j <= 'z'; j++)
+
+		{
+			_putchar(j);
 		}
 	_putchar('\n');
+		}
 
 }
