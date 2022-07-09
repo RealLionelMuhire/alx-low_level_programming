@@ -1,16 +1,12 @@
 #include "main.h"
-
-int _abs(int)
+/**
+ * _abs -> return absolue value of a number
+ * @r: parameter
+ * Return: absolute value of a number
+ */
+int _abs(int r)
 {
-	int r = abs(r)
-	
-		if (r >= 0);
-{
-			printf("%d", r);
-		}
-		else
-		{
-			printf("%d", r);
-		}
-	return (0);
+	if (r < 0)
+		r = -r;
+	return (r);
 }
