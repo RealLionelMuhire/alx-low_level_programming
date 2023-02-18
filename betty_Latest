@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# This ids for to check betty styling of a c file, it should be in the same dir with the c file
+
+# get the last c file
+last_c_file=$(ls -t *.c| head -1)
+
+# check for betty
+betty $last_c_file
+
