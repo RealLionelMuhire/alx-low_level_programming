@@ -3,7 +3,7 @@
 /**
  * main - entry point
  * prints all base 16 numbers in hex
- * return: always 0 (success)
+ * Return: always 0 (success)
  */
 
 int main(void)
@@ -11,7 +11,7 @@ int main(void)
 	int n;
 	char ch;
 
-	for (n = 1; n <= 9; n++)
+	for (n = 0; n <= 9; n++)
 	{
 		putchar((n % 10) + '0');
 	}
