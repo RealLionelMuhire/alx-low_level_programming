@@ -9,7 +9,7 @@ latest_c_file=$(ls -t *.c | head -1)
 filename=$(echo "$latest_c_file" | sed "s/.c$//")
 
 # Compile the C file with gcc and output the compiled file with the same name as the source file
-gcc "$latest_c_file" -o "$filename"
+gcc -Wall -pedantic -Werror -Wextra -std=gnu89 "$latest_c_file" -o "$filename"
 
 # Run the compiled file
 "./$filename"
