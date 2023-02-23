@@ -12,10 +12,10 @@ int main(void)
 
 	for (i = 2; i < n; i++)
 	{
-		while((n % i) == 0)
+		while ((n % i) == 0)
 		{
 			n = n / i;
-		}	
+		}
 	}
 	printf("%lu\n", n);
 
