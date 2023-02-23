@@ -2,9 +2,10 @@
 
 /**
  * main - prints out numbers and fizzBuzz
+ * Return: always 0 (success)
  */
 
-void main(void)
+int main(void)
 {
 	int p;
 
@@ -24,9 +25,15 @@ void main(void)
 		}
 		else
 		{
-			printf("%d", p);
+			printf("%i", p);
 		}
-		printf(" ");
+
+		if (p < 100)
+		{
+			printf(" ");
+		}
 	}
 	printf("\n");
+
+	return (0);
 }
