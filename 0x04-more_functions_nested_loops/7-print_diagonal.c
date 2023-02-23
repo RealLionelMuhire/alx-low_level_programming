@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_diagonal - draws a diagonal line on the terminal
+ * @n: number of forward slash
+ */
+
 void print_diagonal(int n)
 {
 	int p, q;
