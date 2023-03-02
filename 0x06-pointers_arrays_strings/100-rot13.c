@@ -15,7 +15,7 @@ char *rot13(char *s)
 
 	for (m = 0; s[m] != '\0'; m++)
 	{
-		for (n = 0; n < 26; n++)
+		for (n = 0; n < 52; n++)
 		{
 			if (s[m] == lo[n])
 			{
