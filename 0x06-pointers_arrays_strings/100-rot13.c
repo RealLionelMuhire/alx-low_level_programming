@@ -20,11 +20,13 @@ char *rot13(char *s)
 			if (s[m] == lo[n])
 			{
 				s[m] = lo[(n + 13) % 26];
+				break;
 			}
 
 			else if (s[m] == up[n])
 			{
 				s[m] = up[(n + 13) % 26];
+				break;
 			}
 		}
 	}
