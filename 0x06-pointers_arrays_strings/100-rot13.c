@@ -9,8 +9,8 @@ char *rot13(char *s)
 {
 	int m, n;
 
-	char lo[] = "abcdefghijklmnopqrstuvwxyz";
-	char up[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char lo[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char up[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 
 	for (m = 0; s[m] != '\0'; m++)
@@ -19,15 +19,10 @@ char *rot13(char *s)
 		{
 			if (s[m] == lo[n])
 			{
-				s[m] = lo[(n + 13) % 26];
+				s[m] = up[n];
 				break;
 			}
 
-			else if (s[m] == up[n])
-			{
-				s[m] = up[(n + 13) % 26];
-				break;
-			}
 		}
 	}
 return (s);
