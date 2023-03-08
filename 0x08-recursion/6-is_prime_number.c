@@ -24,7 +24,7 @@ int is_prime_helper(int n, int p)
 	{
 		return (0);
 	}
-	else if (p >= _sqrt_recursion(n))
+	else if (p >= n)
 	{
 		return (1);
 	}
