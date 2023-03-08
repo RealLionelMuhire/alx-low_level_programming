@@ -27,7 +27,7 @@ int _sqrt_recursion(int n)
  * @p: a square number guessed
  * Return: squareroot of a number to _sqrt_recursion
  */
-int _sq_helper(int n, iunsigned long int _sqrt_recursion(unsigned long int n)nt p)
+int _sq_helper(int n, int p)
 {
 	if (p * p == n)
 	{
