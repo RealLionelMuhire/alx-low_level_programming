@@ -2,6 +2,7 @@
 
 /**
  * _strlen_recursion - measures the length of a string
+ * @s: string to be measured
  * Return: the lenght of a string
  */
 
