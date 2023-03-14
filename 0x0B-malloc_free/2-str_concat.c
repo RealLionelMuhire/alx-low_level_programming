@@ -22,9 +22,9 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 	else if (s1 == NULL)
-        {
-                s1 = "";
-        }
+	{
+		s1 = "";
+	}
 	p = strlen(s1) + strlen(s2) + 1;
 
 	c_str = (char *)malloc(p * sizeof(char));
