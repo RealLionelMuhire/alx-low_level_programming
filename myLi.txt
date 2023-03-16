@@ -1,0 +1,8 @@
+./0x05-pointers_arrays_strings/_putchar.c
+./0x09-static_libraries/_putchar.c
+./0x06-pointers_arrays_strings/_putchar.c
+./0x08-recursion/_putchar.c
+./0x0B-malloc_free/_putchar.c
+./0x07-pointers_arrays_strings/_putchar.c
+./0x04-more_functions_nested_loops/_putchar.c
+./0x02-functions_nested_loops/_putchar.c

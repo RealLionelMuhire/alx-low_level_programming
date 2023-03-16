@@ -1,3 +1,3 @@
-This is repo is specifically on alx low level programming
+This repo contains c exercises 
 
 There are more c script
