@@ -32,9 +32,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		n = l2;
 	}
 
-	p = l1 + n + 1;
+	p = l1 + n;
 
-	str = (char *)malloc(p);
+	str = (char *)malloc(p + 1);
 
 	if (str == NULL)
 	{
@@ -44,7 +44,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	memcpy(str, s1, l1);
 	memcpy(str + l1, s2, l2);
 	/*str + l1, points to the end of str-pointer arthmetic*/
-	str[p - 1] = '\0';
+	str[p] = '\0';
 
 	return (str);
 }
