@@ -42,7 +42,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	memcpy(str, s1, l1);
-	memcpy(str + l1, s2, l2);
+	memcpy(str + l1, s2, n);
 	/*str + l1, points to the end of str-pointer arthmetic*/
 	str[p] = '\0';
 
