@@ -9,7 +9,7 @@ read c_m
 
 git add .
 
-git commit -m "${c_m} . Files: $l_f"
+git commit -m "${c_m}. Files: $l_f"
 
 git push
 
