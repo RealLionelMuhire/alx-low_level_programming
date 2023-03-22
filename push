@@ -1,10 +1,10 @@
 #!/bin/bash
 
-git add .
-
 echo "Enter Commit Message"
 
 read commit_message
+
+git add .
 
 git commit -m '$commmit_message'
 
