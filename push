@@ -6,7 +6,7 @@ read c_m
 
 git add .
 
-git commit -m '${c_m}'
+git commit -m "${c_m}"
 
 git push
 
