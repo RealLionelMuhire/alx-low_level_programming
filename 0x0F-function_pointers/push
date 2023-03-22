@@ -2,7 +2,11 @@
 
 git add .
 
-git commit -m 'c-Fun_Ptrs'
+echo "Enter Commit Message"
+
+read commit_message
+
+git commit -m '$commmit_message'
 
 git push
 
