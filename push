@@ -1,12 +1,15 @@
 #!/bin/bash
 
+#get last 3 edited files in the folder
+l_f=$(find . -type f -mmin -180 | tail -n 3)
+
 echo "Enter Commit Message"
 
 read c_m
 
 git add .
 
-git commit -m "${c_m}"
+git commit -m "${c_m} files: $l_f"
 
 git push
 
