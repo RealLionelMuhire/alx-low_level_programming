@@ -13,8 +13,7 @@
 int main(int argc, char *argv[])
 {
 	int a, b, res;
-
-	int (*op_fun)(int, int);
+	char *op;
 
 	if (argc != 4)
 	{
@@ -22,9 +21,9 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	op_fun = get_op_func(argv[3]);
+	op = (argv[2]);
 
-	if (op_fun == NULL)
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
@@ -39,7 +38,7 @@ int main(int argc, char *argv[])
 		exit(100);
 	}
 
-	res = op_fun(a, b);
+	res = get_op_func(op)(a, b);
 	printf("%d\n", res);
 
 	return (0);
