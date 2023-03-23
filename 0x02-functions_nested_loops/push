@@ -1,8 +1,15 @@
 #!/bin/bash
 
+#get last 3 edited files in the folder
+l_f=$(ls -t | head -3)
+
+echo "Enter Commit Message"
+
+read c_m
+
 git add .
 
-git commit -m 'Alx Leo s commits,Loops and Nested loops'
+git commit -m "${c_m}. Files: $l_f"
 
 git push
 
