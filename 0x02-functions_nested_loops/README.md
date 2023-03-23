@@ -1,5 +1,7 @@
 This directory contains excersises of nested loops and few on functions
 
+Files & Directories:
+
 - **.**
 *This directory contains excersises of nested loops and few on functions*
 

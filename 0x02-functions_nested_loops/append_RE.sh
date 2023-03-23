@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check if README.md already exists and has more than 4 lines
+if [ -f README.md ] && [ "$(wc -l < README.md)" -gt 4 ]; then
+  # Delete all lines in README.md except the first four
+  sed -i '5,$ d' README.md
+fi
+
 # Loop over all directories and subdirectories in the current directory
 find . -type d -print0 | while read -d '' -r dir; do
     # Check if README.md file exists in the current directory
