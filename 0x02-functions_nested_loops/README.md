@@ -3,7 +3,7 @@ This directory contains excersises of nested loops and few on functions
 Files & Directories:
 
 - **.**
-*This directory contains excersises of nested loops and few on functions*
+This directory contains excersises of nested loops and few on functions
 
 - **0-putchar**
 *  main - entry point

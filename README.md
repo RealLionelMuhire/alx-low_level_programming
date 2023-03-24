@@ -51,7 +51,7 @@ This dir contains c excercises on preprocessor
 This directory contains exercises on introduction to c language. and other application on alx
 
 - **0x0F-function_pointers**
-This this dir contains c exercises about function pointers
+This this dir contains c exercises about function pointers and Others
 
 - **0x02-functions_nested_loops**
 This directory contains excersises of nested loops and few on functions
