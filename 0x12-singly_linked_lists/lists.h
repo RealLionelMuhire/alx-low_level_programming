@@ -1,5 +1,9 @@
 #ifndef LISTS_H
 #define LISTS_H
+#include <stddef.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * struct head - is the first node of linked list
