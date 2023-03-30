@@ -1,6 +1,13 @@
 #ifndef LISTS_H
 #define LISTS_H
 
+/**
+ * struct head - is the first node of linked list
+ * @str: is the string stored in the node
+ * @len: is an integer stored in the node
+ * @next: is the pointer to next node
+ */
+
 typedef struct head
 {
 	char *str;
