@@ -17,10 +17,10 @@ int sum_listint(listint_t *head)
 	}
 	tmp = head;
 
-	while (tmp->next)
+	while (tmp)
 	{
-		tmp = tmp->next;
 		sum += tmp->n;
+		tmp = tmp->next;
 	}
 	return (sum);
 }
