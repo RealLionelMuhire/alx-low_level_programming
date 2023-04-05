@@ -27,15 +27,15 @@ size_t print_listint_safe(const listint_t *head)
 		 * the address tmp->next, it means that the tmp->next was
 		 * allocated before tmp, thus a loop is found
 		 */
-		if (head < head->next)
+		if (head > head->next)
+			head = head->next;
+		else
 		{
 			/*prints the content of the next node and exit*/
 			head = head->next;
 			printf("->[%p] %d\n", (void *)head, head->n);
 			exit(98);
 		}
-		else
-			head = head->next;
 	}
 	return (count);
 }
