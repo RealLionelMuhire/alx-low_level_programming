@@ -18,7 +18,7 @@ listint_t *find_listint_loop(listint_t *head)
 	fast = head;
 
 	/*iterate through each loop*/
-	while (fast->next && fast->next->next)
+	while (fast && fast->next)
 	{
 		/*the slow ptr move next to next */
 		slow = slow->next;
