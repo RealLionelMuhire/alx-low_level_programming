@@ -1,30 +1,43 @@
 #include "lists.h"
 
 /**
- * print_listint_safe - prints list, avoids loop
- * @head: points to start of list
- * Return: number of nodes in size_t or exit 98
+ * print_listint_safe - prints the list with no infinite loop
+ * @head: head of the node
+ * Return: total number of nodes
  */
+
 size_t print_listint_safe(const listint_t *head)
 {
-	/* declarations */
-	size_t nodeCount = 0;
-	/* check for null pointer */
-	while (head)
-	{
-		printf("[%p] %d\n", (void *)head, head->n);
-		nodeCount += 1;
+	size_t count = 0;
+	const listint_t *tmp;
 
-		if (head > head->next)
+	/*check if the head is NULL*/
+	if (!head)
+	{
+		exit(98);
+	}
+
+	tmp = head;
+	while (tmp)
+	{
+		/*print the data and the address and increament*/
+		printf("[%p] %d\n", (void *)tmp, tmp->n);
+		count++;
+
+		/**
+		 * Check if there is a loop, if address of tmp, is lower than the
+		 * the address tmp->next, it means that the tmp->next was
+		 * allocated before tmp, thus a loop is found
+		 */
+		if (tmp < tmp->next)
 		{
-			head = head->next;
+			/*prints the content of the next node and exit*/
+			tmp = tmp->next;
+			printf("->[%p] %d\n", (void *)tmp, tmp->n);
+			exit(98);
 		}
 		else
-		{
-			head = head->next;
-			printf("-> [%p] %d\n", (void *)head, head->n);
-			break;
-		}
+			tmp = tmp->next;
 	}
-	return (nodeCount);
+	return (count);
 }
