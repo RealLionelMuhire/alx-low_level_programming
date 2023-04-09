@@ -8,43 +8,40 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	size_t br;
-	ssize_t n, n_written;
-	char buf[2000];
+	int fd, read_l, wr_l;
+	char *buf;
 
-	if (!filename)
+	buf = malloc(sizeof(char) * letters);
+
+	if (!(buf || filename))
 		return (0);
 
 	fd = open(filename, O_RDONLY);
-	/*Open file for readinf*/
+
 	if (fd == -1)
-		return (0);
-
-	/*read and print the file contents*/
-	br = 0;
-
-	while (br < letters)
 	{
-		n = read(fd, buf, sizeof(buf));
-		if (n == -1)
-		{
-			close(fd);
-			return (0);
-		}
-		else if (n == 0) 
-			break;
-		else
-		{
-			n_written = write(STDOUT_FILENO, buf, n);
-			if (n_written == -1 || n_written != n)
-			{
-				close(fd);
-				return (0);
-			}
-			br += n_written;
-		}
+		free(buf);
+		return (0);
 	}
+
+	read_l = read(fd, buf, letters);
+
+	if (read_l < 0)
+	{
+		close(fd);
+		free(buf);
+		return (0);
+	}
+
+	wr_l = write(STDOUT_FILENO, buf, read_l);
+
+	if (wr_l == -1 || wr_l != read_l)
+	{
+		close(fd);
+		free(buf);
+		return (0);
+	}
+	free(buf);
 	close(fd);
-	return (br);
+	return (read_l);
 }
