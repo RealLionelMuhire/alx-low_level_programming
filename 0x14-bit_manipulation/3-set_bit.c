@@ -3,6 +3,7 @@
 /**
  * set_bit - sets the bit at thespecified index
  * @index: index place of the bit
+ * @n: a number that contains bit
  * Return: 1 at succes otherwise -1
  */
 
