@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Get a list of all .c files in the current directory
+c_files=$(ls *.c)
+
+# Iterate over each .c file
+for file in $c_files; do
+    # Extract the base name of the file without the extension
+    base_name=$(basename -s .c "$file")
+
+    # Compile the .c file into a .o file with the same base name
+    gcc -c "$file" -o "$base_name".o
+done
+
