@@ -1,5 +1,5 @@
-#ifndef HASH_TABLE_C
-#define HASH_TABLE_C
+#ifndef HASH_TABLES_C
+#define HASH_TABLES_C
 /*Header files*/
 
 #include <stdio.h>
