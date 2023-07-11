@@ -8,7 +8,7 @@
 
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	size_t hash_value = 5381;
+	unsigned long int hash_value = 5381;
 	int c;
 
 	while ((c = *str++))
